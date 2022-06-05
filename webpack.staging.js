@@ -10,4 +10,3 @@ module.exports = merge(dev, {
     path: path.resolve(__dirname, "dist")
   },
 });
-

@@ -5,3 +5,10 @@ import "./main.scss";
 const alertService = new AlertService();
 const componentService = new ComponentService();
 run(alertService, componentService);
+
+const env = process.env.NODE_ENV;
+
+// console.log("I am " + env + "environment")
+const heading = document.querySelector('.env');
+heading.textContent = `${env} environment`;
+

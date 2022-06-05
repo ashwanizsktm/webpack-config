@@ -5,8 +5,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server  --config webpack.dev.js --open",
-    "build": "webpack --config webpack.prod.js"
+    "start": "NODE_ENV=dev webpack-dev-server  --config webpack.dev.js --open",
+    "test": "NODE_ENV=test webpack-dev-server --config webpack.test.js",
+    "staging": "NODE_ENV=staging webpack-dev-server --config webpack.staging.js",
+    "build": "NODE_ENV=prod webpack --config webpack.prod.js"
   },
   "keywords": [],
   "author": "",
@@ -20,7 +22,7 @@
     "jquery": "^3.3.1",
     "mini-css-extract-plugin": "^0.5.0",
     "node-sass": "^4.11.0",
-    "optimize-css-assets-webpack-plugin": "^5.0.1",
+    "optimize-css-assets-webpack-plugin": "^5.0.8",
     "popper.js": "^1.14.7",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
