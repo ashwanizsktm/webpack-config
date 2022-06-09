@@ -3,20 +3,16 @@ const path = require("path");
 
 module.exports = {
   entry: {
-    main:"./src/index.js",
+    main: "./src/index.js",
   },
-   
-  
-  plugins: [
-  //   new HtmlWebpackPlugin({
-  //   template: "./src/template.html"
-  // }),
 
-  new webpack.DefinePlugin({
-    "process.env.NODE_ENV": JSON.stringify(process.env.NODE_ENV),
-  }),
-  
-],
+
+  plugins: [
+    new webpack.DefinePlugin({
+      "process.env.NODE_ENV": JSON.stringify(process.env.NODE_ENV),
+    }),
+
+  ],
 
   module: {
     rules: [
@@ -33,7 +29,7 @@ module.exports = {
             outputPath: "imgs"
           }
         }
-      }
+      },
     ]
   }
 }

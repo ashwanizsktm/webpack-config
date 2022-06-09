@@ -1,0 +1,257 @@
+@import '../abstract/variables';
+// utilities classes
+$percent: 1%;
+
+@for $space from 0 through 60 {
+    .m-#{$space} {
+        margin: #{$space}px;
+    }
+
+    .m-neg-#{$space} {
+        margin: -#{$space}px;
+    }
+
+    .m-per-neg-#{$space} {
+        margin: -#{$space * $percent};
+    }
+
+    .mt-#{$space} {
+        margin-top: #{$space}px;
+    }
+
+    .mt-neg-#{$space} {
+        margin-top: -#{$space}px;
+    }
+
+    .mt-per-neg-#{$space} {
+        margin-top: -#{$space * $percent};
+    }
+
+    .mb-#{$space} {
+        margin-bottom: #{$space}px;
+    }
+
+    .mb-neg-#{$space} {
+        margin-bottom: -#{$space}px;
+    }
+
+    .mb-per-neg-#{$space} {
+        margin-bottom: -#{$space * $percent};
+    }
+
+    .ml-#{$space} {
+        margin-left: #{$space}px;
+    }
+
+    .ml-neg-#{$space} {
+        margin-left: -#{$space}px;
+    }
+
+    .ml-per-neg-#{$space} {
+        margin-left: -#{$space * $percent};
+    }
+
+    .mr-#{$space} {
+        margin-right: #{$space}px;
+    }
+
+    .mr-neg-#{$space} {
+        margin-right: -#{$space}px;
+    }
+
+    .mr-per-neg-#{$space} {
+        margin-right: -#{$space * $percent};
+    }
+
+    .mx-#{$space} {
+        margin: 0 #{$space}px;
+    }
+
+    .mx-per-#{$space} {
+        margin: 0 #{$space * $percent};
+    }
+
+    .my-#{$space} {
+        margin: #{$space}px 0;
+    }
+
+    .my-per-#{$space} {
+        margin: #{$space * $percent} 0;
+    }
+
+    .p-#{$space} {
+        padding: #{$space}px;
+    }
+
+    .p-neg-#{$space} {
+        padding: -#{$space}px;
+    }
+
+    .p-per-neg-#{$space} {
+        padding: -#{$space * $percent};
+    }
+
+    .px-#{$space} {
+        padding: 0 #{$space}px;
+    }
+
+    .px-per-#{$space} {
+        padding: 0 #{$space * $percent};
+    }
+
+    .py-#{$space} {
+        padding: #{$space}px 0;
+    }
+
+    .py-per-#{$space} {
+        padding: #{$space * $percent} 0;
+    }
+
+    .pt-#{$space} {
+        padding-top: #{$space}px;
+    }
+
+    .pt-neg-#{$space} {
+        padding-top: -#{$space}px;
+    }
+
+    .pt-per-neg-#{$space} {
+        padding-top: -#{$space * $percent};
+    }
+
+    .pb-#{$space} {
+        padding-bottom: #{$space}px;
+    }
+
+    .pb-neg-#{$space} {
+        padding-bottom: -#{$space}px;
+    }
+
+    .pb-per-neg-#{$space} {
+        padding-bottom: -#{$space * $percent};
+    }
+
+    .pr-#{$space} {
+        padding-right: #{$space}px;
+    }
+
+    .pr-neg-#{$space} {
+        padding-right: -#{$space}px;
+    }
+
+    .pl-#{$space} {
+        padding-left: #{$space}px;
+    }
+
+    .pl-neg-#{$space} {
+        padding-left: -#{$space}px;
+    }
+
+    .pl-per-neg-#{$space} {
+        padding-left: -#{$space * $percent};
+    }
+
+    .lh-#{$space} {
+        line-height: #{$space}px;
+    }
+}
+
+@for $space from 0 through 50 {
+    @media (min-width: $media-breakpoint-lg) {
+        .my-lg-#{$space} {
+            margin: #{$space}px 0;
+        }
+
+        .mt-lg-#{$space} {
+            margin-top: #{$space}px;
+        }
+
+        .mb-lg-#{$space} {
+            margin-bottom: #{$space}px;
+        }
+
+        .mx-lg-#{$space} {
+            margin: 0 #{$space}px;
+        }
+
+        .pl-lg-#{$space} {
+            padding-left: #{$space}px;
+        }
+    }
+}
+
+// for width and height in pixels.
+@for $amount from 1 through 1000 {
+    .w-#{$amount} {
+        width: #{$amount}px;
+    }
+
+    .w-min-#{$amount} {
+        min-width: #{$amount}px;
+    }
+
+    .w-max-#{$amount} {
+        max-width: #{$amount}px;
+    }
+
+    .h-#{$amount} {
+        height: #{$amount}px;
+    }
+
+    .h-min-#{$amount} {
+        min-height: #{$amount}px;
+    }
+
+    .h-max-#{$amount} {
+        max-height: #{$amount}px;
+    }
+}
+
+// for width and height in percentage.
+@for $amount from 1 through 100 {
+    .w-per-#{$amount} {
+        width: #{$amount * $percent};
+    }
+
+    .w-min-per-#{$amount} {
+        min-width: #{$amount * $percent};
+    }
+
+    .w-max-per-#{$amount} {
+        max-width: #{$amount * $percent};
+    }
+
+    .h-per-#{$amount} {
+        height: #{$amount * $percent};
+    }
+
+    .h-min-per-#{$amount} {
+        min-height: #{$amount * $percent};
+    }
+
+    .h-max-per-#{$amount} {
+        max-height: #{$amount * $percent};
+    }
+
+    @media (min-width: $media-breakpoint-lg) {
+        .w-per-lg-#{$amount} {
+            width: #{$amount * $percent};
+        }
+
+        .w-min-per-lg-#{$amount} {
+            min-width: #{$amount * $percent};
+        }
+    }
+}
+
+// margin and padding for x and y axis
+@for $x from 0 through 50 {
+    @for $y from 0 through 50 {
+        .m-#{$x}-#{$y} {
+            margin: #{$x}px #{$y}px;
+        }
+        .p-#{$x}-#{$y} {
+            padding: #{$x}px #{$y}px;
+        }
+    }
+}

@@ -1,0 +1,13 @@
+// functions to convert px to rem.
+
+@function toRem($value) {
+    $remValue: ($value / 16) + rem; 
+    @return $remValue;
+  }
+  
+  // how to use
+  // .classname{
+  //   width: toRem(300);
+  //   font-size: toRem(12);
+  //   padding: toRem(6);
+  // }

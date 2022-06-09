@@ -1,0 +1,27 @@
+
+  
+// breakpoints
+@mixin breakpoint($point) {
+    @if $point == mobile {
+      @media screen and(max-width : 480px) {
+        @content;
+      }
+    } @else if $point == tablet {
+      @media screen and(max-width : 768px) {
+        @content;
+      }
+    } @else if $point == laptop {
+      @media screen and(max-width : 1224px) {
+        @content;
+      }
+    } @else if $point == largescreens {
+      @media screen and(max-width : 1824px) {
+        @content;
+      }
+    }
+  }
+  
+  // how to use
+  // @include breakpoint(laoptop) {
+  //   background-color: red;
+  // }

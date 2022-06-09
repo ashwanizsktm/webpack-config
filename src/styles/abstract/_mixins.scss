@@ -1,0 +1,98 @@
+@import './variables';
+
+@mixin action-btn($action-btn-bg, $btn-color, $b-radius) {
+  padding: 1rem;
+  background-color: $action-btn-bg;
+  color: $btn-color;
+  border-radius: $b-radius;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  text-align: center;
+  font-size: 16px;
+
+  &:hover {
+    background-color: darken($color: $action-btn-bg, $amount: 5%);
+    // color: rgba(255, 255, 255, 1);
+    // box-shadow: 0 5px 15px rgba(70, 71, 71, 0.4);
+  }
+
+  &:focus {
+    outline: none;
+    border: none;
+  }
+
+  &:disabled {
+    background-color: lighten($color: $action-btn-bg, $amount: 3%);
+    opacity: 0.6;
+    &:hover {
+      background-color: lighten($color: $action-btn-bg, $amount: 3%);
+    }
+  }
+}
+
+// flexbox common
+@mixin flexbox($justify-content: center, $direction: row, $align-items: center) {
+    display: flex;
+
+    @if $justify-content!= "center" {
+        justify-content: $justify-content;
+    } @else {
+        justify-content: center;
+    }
+
+    @if $direction != "row" {
+        flex-direction: $direction;
+    } @else {
+        flex-direction: row;
+    }
+
+    @if $align-items != "center" {
+        align-items: $align-items;
+    } @else {
+        align-items: center;
+    }
+}
+
+// box shadow with browser supports.
+@mixin box-shadow($x-axis, $y-axis, $blur, $size, $color) {
+  -webkit-box-shadow: $x-axis $y-axis $blur $size $color;
+  -moz-box-shadow: $x-axis $y-axis $blur $size $color;
+  -moz-box-shadow: $x-axis $y-axis $blur $size $color;
+  box-shadow: $x-axis $y-axis $blur $size $color;
+}
+
+// mixins for ellipses
+// ellipses common
+
+@mixin ellipses($width) {
+  width: $width;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -moz-white-space: nowrap;
+  -ms-text-overflow: ellipsis;
+  -moz-text-overflow: ellipsis;
+}
+
+@mixin pseudo(
+  $loc: before,
+  $content: "",
+  $pos: absolute,
+  $top: 0,
+  $bottom: 0,
+  $left: 0,
+  $right: 0
+) {
+  position: relative;
+  &::#{$loc} {
+    content: $content;
+    position: $pos;
+    top: $top;
+    bottom: $bottom;
+    left: $left;
+    right: $right;
+    @content;
+  }
+}

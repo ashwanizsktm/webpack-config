@@ -1,0 +1,43 @@
+$primary: teal;
+$danger: red;
+// @import "~bootstrap/scss/bootstrap";
+@import 'abstract/index';
+@import 'utilities/index';
+
+
+.env{
+    color: $primary;
+    font-weight: bold;
+}
+
+.container-box{
+   @include flexbox(space-around);
+}
+
+.box{
+    width: 300px;
+    height: 200px;
+    background-color: $box-bg;
+    padding: 10px;
+}
+
+.nav{
+    list-style: none;
+    background-color: green;
+    color: #fff;
+    @include flexbox(space-around, center, row);
+}
+
+.test-1{
+    list-style: none;
+    background-color: green;
+    color: #fff;
+    @include flexbox(space-around, center, row);
+}
+
+.test-2{
+    list-style: none;
+    background-color: green;
+    color: #fff;
+    @include flexbox(space-around, center, row);
+}
