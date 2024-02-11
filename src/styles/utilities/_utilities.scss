@@ -2,7 +2,7 @@
 // utilities classes
 $percent: 1%;
 
-@for $space from 0 through 60 {
+@for $space from 0 through 20 {
     .m-#{$space} {
         margin: #{$space}px;
     }
@@ -156,7 +156,7 @@ $percent: 1%;
     }
 }
 
-@for $space from 0 through 50 {
+@for $space from 0 through 20 {
     @media (min-width: $media-breakpoint-lg) {
         .my-lg-#{$space} {
             margin: #{$space}px 0;
@@ -250,6 +250,7 @@ $percent: 1%;
         .m-#{$x}-#{$y} {
             margin: #{$x}px #{$y}px;
         }
+
         .p-#{$x}-#{$y} {
             padding: #{$x}px #{$y}px;
         }

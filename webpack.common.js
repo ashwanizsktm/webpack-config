@@ -1,5 +1,10 @@
 var webpack = require('webpack');
 const path = require("path");
+const glob = require('glob');
+const PATHS = {
+	src: path.join(__dirname, 'src')
+}
+const {PurgeCSSPlugin} = require('purgecss-webpack-plugin');
 
 module.exports = {
   entry: {
@@ -8,10 +13,9 @@ module.exports = {
 
 
   plugins: [
-    new webpack.DefinePlugin({
-      "process.env.NODE_ENV": JSON.stringify(process.env.NODE_ENV),
-    }),
-
+    new PurgeCSSPlugin({
+			paths: glob.sync(`${PATHS.src}/**/*`,  { nodir: true }),
+		  }),
   ],
 
   module: {
